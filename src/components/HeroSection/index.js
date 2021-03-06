@@ -26,12 +26,12 @@ const HeroSection = () => {
           dangerouslySetInnerHTML={{
             __html: `
         <video
-          loop
           muted
-          autoplay
         />,
       `,
           }}
+          autoPlay
+          loop
           src={Video}
           type="video/mp4"
           volume="0"
