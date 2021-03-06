@@ -22,7 +22,20 @@ const HeroSection = () => {
   return (
     <HeroContainer id="home">
       <HeroBg>
-        <VideoBg muted autoPlay loop src={Video} type="video/mp4" volume="0" />
+        <VideoBg
+          dangerouslySetInnerHTML={{
+            __html: `
+        <video
+          loop
+          muted
+          autoplay
+        />,
+      `,
+          }}
+          src={Video}
+          type="video/mp4"
+          volume="0"
+        />
       </HeroBg>
       <HeroContent>
         <HeroH1>Traveling Made Easy</HeroH1>
